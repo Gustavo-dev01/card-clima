@@ -1,0 +1,223 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-top: 30px;
+    background-color:rgba(153, 139, 139, 0.45)
+}
+.card {
+    width: 350px;
+    height:235px;
+    position:relative;
+    padding:25px;
+    background: radial-gradient(178.94% 106.41% at 26.42% 106.41%,  #2b2effab 0%, rgba(201, 215, 252, 0.685) 71.88%), #d0d3f5;
+    box-shadow:0px 155px 62px rgba(81, 114, 125, 0.16), 0px 87px 52px rgba(0, 0, 0, 0.05), 0px 39px 39px rgba(82, 31, 31, 0.09), 0px 10px 21px rgba(31, 58, 117, 0.454), 0px 0px 0px rgba(0, 0, 0, 0);
+    border-radius:23px;
+    transition:all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
+    cursor:pointer;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.container {
+    width: 250px;
+    height:250px;
+    position:absolute;
+    right: -35px;
+    top: -50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0.7);
+}
+
+.cloud {
+    width:250px;
+  }
+  
+  .front {
+    padding-top: 45px;
+    margin-left: 25px;
+    display: inline;
+    position: absolute;
+    z-index: 11;
+    animation: clouds 8s infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  .back {
+    margin-top: -30px;
+    margin-left: 150px;
+    z-index: 12;
+    animation: clouds 12s infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  .right-front {
+    width: 45px;
+    height:45px;
+    border-radius: 50% 50% 50% 0%;
+    background-color: #696969;
+    display: inline-block;
+    margin-left: -25px;
+    z-index: 5;
+  }
+
+  .left-front {
+    width: 90px;
+    height: 90px;
+    border-radius: 50% 50% 0% 50%;
+    background-color: #696969;
+    display: inline-block;
+    z-index:5;
+  }
+
+  .right-back {
+    width: 50px;
+    height: 50px;
+    border-radius: 50% 50% 50% 0%;
+    background-color: #696969;
+    display: inline-block;
+    margin-left: -20px;
+    z-index: 5;
+  }
+
+  .left-back {
+    width: 30px;
+    height: 30px;
+    border-radius: 50% 50% 0% 50%;
+    background-color: #696969;
+    display:inline-block;
+    z-index:5;
+  }
+
+  .moon {
+  width: 120px;
+  height: 120px;
+  background: -webkit-linear-gradient(to right, #adadad, #555555);
+  background: linear-gradient(to right, #5f5f5f, #F8F8F8);
+  border-radius: 60px;
+  display: inline;
+  position: absolute;
+  }
+
+
+  .shine {
+    animation: sunshines 2s infinite;
+  }
+
+  @keyframes sunshines {
+    0% {
+      transform: scale(1);
+      opacity: 0.6;
+    }
+
+    100% {
+      transform: scale(1.4);
+      opacity: 0;
+    }
+  }
+
+  @keyframes clouds {
+    0% {
+      transform: translateX(15px);
+    }
+  
+    50% {
+      transform: translateX(0px);
+    }
+  
+    100% {
+      transform: translateX(15px);
+    }
+  }
+  
+  .card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card-header span:first-child {
+    word-break: break-all;
+    font-weight: 800;
+    font-size: 23px;
+    line-height: 135%;
+    color: rgb(93, 94, 100);
+  }
+
+  
+.card-header span:last-child {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 135%;
+  color: rgb(252, 255, 255);
+}
+
+.temperatura {
+  position:absolute;
+  left: 14px;
+  bottom: 12px;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 77px;
+  color: rgb(253, 253, 253);
+}
+
+.temp-escala {
+  width: 80px;
+  height: 36px;
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(106, 121, 228, 0.929);
+  border-radius: 10px;
+}
+
+.temp-escala span {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 134.49%;
+  color: rgba(238, 240, 243, 0.998);
+  font-family:Arial;
+}
+
+  .raindrop {
+    display:flex;
+    justify-content:center;
+  }
+
+  .raindrop span {
+   position:relative;
+   bottom: 10px;
+   width:0;
+   height:0;
+   margin:0.25em;
+   border-radius: 50%;
+   border-left: 7px solid transparent;
+   border-right: 7px solid transparent;
+   border-bottom: 19px solid rgba(0, 119, 255, 0.6);
+   animation: falling calc(21s / var(--i)) linear infinite, swinging 10s ease-in-out infinite;
+   z-index: 10;
+  }
+
+  @keyframes falling {
+    0% {
+      transform: translateY(0) scale(1);
+    }
+    70% {
+      transform: translateY(300px) scale(1);
+    }
+    100% {
+        transform: translateY(300px) scale(0);
+    }
+}
+
+  
+
+
